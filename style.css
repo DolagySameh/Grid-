@@ -1,0 +1,352 @@
+/* التصفير الأساسي وإعدادات الخط */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Cairo', sans-serif;
+}
+
+body {
+    background-color: #f4f6f9;
+    color: #333;
+    min-height: 100vh;
+}
+
+/* التقسيمة الرئيسية للصفحة بالـ Grid */
+.dashboard-container {
+    display: grid;
+    grid-template-columns: 260px 1fr; /* السايدبار الثابت وباقي المساحة للمحتوى */
+    min-height: 100vh;
+}
+
+/* --- القائمة الجانبية (Sidebar) --- */
+.sidebar {
+    background-color: #ffffff;
+    border-left: 1px solid #e5e7eb;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.sidebar .logo h2 {
+    color: #4f46e5;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.sidebar .logo p {
+    font-size: 12px;
+    color: #6b7280;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #4b5563;
+    padding: 12px 16px;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.menu a.active, .menu a:hover {
+    background-color: #f3f4f6;
+    color: #4f46e5;
+    font-weight: 600;
+}
+
+.quick-actions h3 {
+    font-size: 13px;
+    color: #9ca3af;
+    margin-bottom: 12px;
+}
+
+.quick-actions button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 8px;
+    border: 1px solid #e5e7eb;
+    border-radius: 6px;
+    background: #fff;
+    cursor: pointer;
+    font-size: 13px;
+    transition: 0.2s;
+}
+
+.quick-actions button:hover {
+    background-color: #4f46e5;
+    color: #fff;
+}
+
+/* --- المحتوى الرئيسي --- */
+.main-content {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+/* الهيدر العلوي */
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    padding: 16px 24px;
+    border-radius: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.status-badge {
+    background-color: #d1fae5;
+    color: #065f46;
+    padding: 2px 8px;
+    border-radius: 20px;
+    font-size: 11px;
+}
+
+.header-search input {
+    padding: 8px 16px;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    width: 250px;
+}
+
+/* الصف الأول: كروت الإحصائيات (توزيع Grid متساوي) */
+.row-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.stat-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    position: relative;
+}
+
+.card-title {
+    font-size: 14px;
+    color: #6b7280;
+}
+
+.card-value {
+    font-size: 22px;
+    font-weight: 700;
+    margin-top: 8px;
+}
+
+.trend {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.trend.positive { color: #10b981; }
+.trend.negative { color: #ef4444; }
+
+/* الكروت العامة للمحتوى */
+.content-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.content-card h3 {
+    font-size: 16px;
+    margin-bottom: 16px;
+    color: #111827;
+}
+
+/* الصف الثاني: تقسيم الجريد (70% للمعاملات و 30% للجانب الأيسر) */
+.row-middle-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+}
+
+/* جداول المعاملات */
+.table-container table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: right;
+}
+
+.table-container th, .table-container td {
+    padding: 12px;
+    border-bottom: 1px solid #f3f4f6;
+    font-size: 13px;
+}
+
+.table-container th {
+    color: #6b7280;
+    font-weight: 600;
+}
+
+.badge {
+    padding: 4px 8px;
+    border-radius: 6px;
+    font-size: 11px;
+}
+
+.badge.income { background: #e0f2fe; color: #0369a1; }
+.badge.expense { background: #fef3c7; color: #b45309; }
+.badge.shopping { background: #f3e8ff; color: #6b21a8; }
+
+.status.done { color: #10b981; font-weight: 600; }
+
+.amount.positive { color: #10b981; font-weight: 600; }
+.amount.negative { color: #ef4444; font-weight: 600; }
+
+/* العمود الجانبي (أنشطة وفواتير) */
+.side-column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.activity-item {
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    font-size: 12px;
+}
+
+.activity-item.info { background: #eff6ff; color: #1e40af; border-right: 4px solid #3b82f6; }
+.activity-item.success { background: #ecfdf5; color: #065f46; border-right: 4px solid #10b981; }
+
+/* الفواتير الشبكية */
+.bills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.bill-item {
+    background: #f9fafb;
+    padding: 12px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    font-size: 12px;
+}
+
+/* الصف الثالث: الكروت، التشارت، والميزانية (3 أعمدة متساوية) */
+.row-bottom-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+/* تصميم كروت الفيزا بالـ CSS */
+.cards-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.credit-card {
+    padding: 20px;
+    border-radius: 12px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 130px;
+}
+
+.credit-card.visa {
+    background: linear-gradient(135deg, #4338ca, #1e1b4b);
+}
+
+.credit-card.mastercard {
+    background: linear-gradient(135deg, #991b1b, #7f1d1d);
+}
+
+.card-number {
+    font-size: 16px;
+    letter-spacing: 2px;
+    margin: 15px 0;
+}
+
+/* شاشات الرسم البياني المحاكي */
+.mock-chart {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    height: 100px;
+    border-bottom: 2px solid #e5e7eb;
+    margin-bottom: 15px;
+}
+
+.chart-bar {
+    display: flex;
+    gap: 4px;
+    align-items: flex-end;
+    height: 100%;
+    width: 30px;
+}
+
+.bar {
+    width: 12px;
+    border-radius: 4px 4px 0 0;
+}
+
+.bar.green { background-color: #10b981; }
+.bar.red { background-color: #ef4444; }
+
+.account-summary {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-size: 13px;
+}
+
+.summary-item {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px dashed #e5e7eb;
+    padding-bottom: 4px;
+}
+
+/* الميزانيات والـ Progress Bars */
+.budget-item {
+    margin-bottom: 14px;
+}
+
+.budget-info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    margin-bottom: 6px;
+}
+
+.progress-bar {
+    background: #e5e7eb;
+    height: 8px;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.progress {
+    height: 100%;
+    border-radius: 4px;
+}

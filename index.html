@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مدبّر | إدارة أموالك بذكاء</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="dashboard-container">
+        
+        <aside class="sidebar">
+            <div class="logo">
+                <h2>مدبّر</h2>
+                <p>إدارة أموالك بذكاء</p>
+            </div>
+            <nav class="menu">
+                <a href="#" class="active">الصفحة الرئيسية</a>
+                <a href="#">المعاملات</a>
+                <a href="#">الميزانيات</a>
+                <a href="#">المدخرات</a>
+                <a href="#">الفواتير الشهرية</a>
+            </nav>
+            <div class="quick-actions">
+                <h3>إجراءات سريعة</h3>
+                <button>إرسال أموال</button>
+                <button>إضافة أموال</button>
+                <button>دفع فاتورة</button>
+                <button>استثمار</button>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            
+            <header class="main-header">
+                <div class="user-profile">
+                    <span class="status-badge">متصل</span>
+                    <div class="user-info">
+                        <h4>سيف أسامة</h4>
+                        <p>حساب مميز</p>
+                    </div>
+                </div>
+                <div class="header-search">
+                    <input type="text" placeholder="بحث...">
+                </div>
+            </header>
+
+            <section class="row-cards">
+                <div class="stat-card">
+                    <p class="card-title">الرصيد الحالي</p>
+                    <h3 class="card-value">8,450 جنيهاً</h3>
+                    <span class="trend positive">↑ 2.5%</span>
+                </div>
+                <div class="stat-card">
+                    <p class="card-title">الدخل</p>
+                    <h3 class="card-value">15,000 جنيهاً</h3>
+                    <span class="trend positive">↑ 8.2%</span>
+                </div>
+                <div class="stat-card">
+                    <p class="card-title">المصروفات</p>
+                    <h3 class="card-value">10,000 جنيهاً</h3>
+                    <span class="trend negative">↓ 1.2%</span>
+                </div>
+            </section>
+
+            <section class="row-middle-grid">
+                
+                <div class="content-card transactions">
+                    <h3>المعاملات الأخيرة</h3>
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>المعاملة</th>
+                                    <th>الفئة</th>
+                                    <th>التاريخ</th>
+                                    <th>الحالة</th>
+                                    <th>المبلغ</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>محمود النجار <p>تحويل أموال</p></td>
+                                    <td><span class="badge income">دخل</span></td>
+                                    <td>14 أكتوبر 2025</td>
+                                    <td><span class="status done">مكتمل</span></td>
+                                    <td class="amount positive">+250 جنيه</td>
+                                </tr>
+                                <tr>
+                                    <td>مطعم Meat moot <p>دفع فاتورة مطعم</p></td>
+                                    <td><span class="badge expense">طعام</span></td>
+                                    <td>14 أكتوبر 2025</td>
+                                    <td><span class="status done">مكتمل</span></td>
+                                    <td class="amount negative">-2200 جنيه</td>
+                                </tr>
+                                <tr>
+                                    <td>مشتريات Amazon <p>تسوق إلكتروني</p></td>
+                                    <td><span class="badge shopping">تسوق</span></td>
+                                    <td>13 أكتوبر 2025</td>
+                                    <td><span class="status done">مكتمل</span></td>
+                                    <td class="amount negative">-1250 جنيه</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="side-column">
+                    <div class="content-card activities">
+                        <h3>الأنشطة الحديثة</h3>
+                        <div class="activity-item info">تم إنشاء حساب توفير جديد بنجاح</div>
+                        <div class="activity-item success">تم إضافة بطاقة جديدة ينتهي بـ ****2817</div>
+                    </div>
+
+                    <div class="content-card monthly-bills">
+                        <h3>الفواتير الشهرية <span class="total-bill">1920 جنيه</span></h3>
+                        <div class="bills-grid">
+                            <div class="bill-item"><span>كهرباء</span> <strong>400 جنيه</strong></div>
+                            <div class="bill-item"><span>إنترنت</span> <strong>450 جنيه</strong></div>
+                            <div class="bill-item"><span>Netflix</span> <strong>780 جنيه</strong></div>
+                            <div class="bill-item"><span>هاتف</span> <strong>290 جنيه</strong></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="row-bottom-grid">
+                
+                <div class="content-card payment-methods">
+                    <h3>وسائل الدفع</h3>
+                    <div class="cards-stack">
+                        <div class="credit-card visa">
+                            <div class="card-brand">VISA</div>
+                            <div class="card-number">**** **** **** 4532</div>
+                            <div class="card-holder">سيف أسامة</div>
+                        </div>
+                        <div class="credit-card mastercard">
+                            <div class="card-brand">MasterCard</div>
+                            <div class="card-number">**** **** **** 8981</div>
+                            <div class="card-holder">سيف أسامة</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-card chart-card">
+                    <h3>الدخل مقابل المصروفات</h3>
+                    <div class="mock-chart">
+                        <div class="chart-bar"><span class="bar green" style="height: 80%;"></span><span class="bar red" style="height: 50%;"></span></div>
+                        <div class="chart-bar"><span class="bar green" style="height: 70%;"></span><span class="bar red" style="height: 60%;"></span></div>
+                        <div class="chart-bar"><span class="bar green" style="height: 90%;"></span><span class="bar red" style="height: 40%;"></span></div>
+                    </div>
+                    <div class="account-summary">
+                        <div class="summary-item"><span>حساب جاري</span> <strong>8,450 جنيه</strong></div>
+                        <div class="summary-item"><span>حساب التوفير</span> <strong>297,540 جنيه</strong></div>
+                    </div>
+                </div>
+
+                <div class="content-card budget-card">
+                    <h3>نظرة عامة على الميزانية</h3>
+                    <div class="budget-item">
+                        <div class="budget-info"><span>إجمالي الميزانية (10000 جنيه)</span> <span>82.5%</span></div>
+                        <div class="progress-bar"><div class="progress" style="width: 82.5%; background: #4f46e5;"></div></div>
+                    </div>
+                    <div class="budget-item">
+                        <div class="budget-info"><span>ترفيه</span> <span>750 جنيه</span></div>
+                        <div class="progress-bar"><div class="progress" style="width: 40%; background: #f97316;"></div></div>
+                    </div>
+                    <div class="budget-item">
+                        <div class="budget-info"><span>فواتير</span> <span>2000 جنيه</span></div>
+                        <div class="progress-bar"><div class="progress" style="width: 90%; background: #ef4444;"></div></div>
+                    </div>
+                </div>
+
+            </section>
+
+        </main>
+    </div>
+
+</body>
+</html>sty

@@ -1,4 +1,3 @@
-/* التصفير الأساسي وإعدادات الخط */
 * {
     margin: 0;
     padding: 0;
@@ -12,14 +11,12 @@ body {
     min-height: 100vh;
 }
 
-/* التقسيمة الرئيسية للصفحة بالـ Grid */
 .dashboard-container {
     display: grid;
-    grid-template-columns: 260px 1fr; /* السايدبار الثابت وباقي المساحة للمحتوى */
+    grid-template-columns: 260px 1fr; 
     min-height: 100vh;
 }
 
-/* --- القائمة الجانبية (Sidebar) --- */
 .sidebar {
     background-color: #ffffff;
     border-left: 1px solid #e5e7eb;
@@ -84,7 +81,6 @@ body {
     color: #fff;
 }
 
-/* --- المحتوى الرئيسي --- */
 .main-content {
     padding: 24px;
     display: flex;
@@ -92,7 +88,6 @@ body {
     gap: 24px;
 }
 
-/* الهيدر العلوي */
 .main-header {
     display: flex;
     justify-content: space-between;
@@ -124,7 +119,6 @@ body {
     width: 250px;
 }
 
-/* الصف الأول: كروت الإحصائيات (توزيع Grid متساوي) */
 .row-cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -175,14 +169,12 @@ body {
     color: #111827;
 }
 
-/* الصف الثاني: تقسيم الجريد (70% للمعاملات و 30% للجانب الأيسر) */
 .row-middle-grid {
     display: grid;
     grid-template-columns: 2fr 1fr;
     gap: 20px;
 }
 
-/* جداول المعاملات */
 .table-container table {
     width: 100%;
     border-collapse: collapse;
@@ -215,7 +207,6 @@ body {
 .amount.positive { color: #10b981; font-weight: 600; }
 .amount.negative { color: #ef4444; font-weight: 600; }
 
-/* العمود الجانبي (أنشطة وفواتير) */
 .side-column {
     display: flex;
     flex-direction: column;
@@ -232,7 +223,6 @@ body {
 .activity-item.info { background: #eff6ff; color: #1e40af; border-right: 4px solid #3b82f6; }
 .activity-item.success { background: #ecfdf5; color: #065f46; border-right: 4px solid #10b981; }
 
-/* الفواتير الشبكية */
 .bills-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -249,14 +239,12 @@ body {
     font-size: 12px;
 }
 
-/* الصف الثالث: الكروت، التشارت، والميزانية (3 أعمدة متساوية) */
 .row-bottom-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
 }
 
-/* تصميم كروت الفيزا بالـ CSS */
 .cards-stack {
     display: flex;
     flex-direction: column;
@@ -287,7 +275,6 @@ body {
     margin: 15px 0;
 }
 
-/* شاشات الرسم البياني المحاكي */
 .mock-chart {
     display: flex;
     justify-content: space-around;
@@ -327,7 +314,6 @@ body {
     padding-bottom: 4px;
 }
 
-/* الميزانيات والـ Progress Bars */
 .budget-item {
     margin-bottom: 14px;
 }
